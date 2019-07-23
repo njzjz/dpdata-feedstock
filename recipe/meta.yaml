@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b1a65041a459c440cb412c1020a430520c1affed81daefc746a8f9f4c021eb7e
-  patches:
-    - version.diff
 
 build:
   number: 0
@@ -20,11 +18,13 @@ requirements:
   host:
     - python >=3.5
     - pip
-    - numpy
+    - numpy >=1.14.3
+    - setuptools_scm
   run:
     - python >=3.5
     - {{ pin_compatible('numpy') }}
     - monty
+    - pymatgen
 
 test:
   imports:
@@ -34,6 +34,7 @@ about:
   home: https://github.com/deepmodeling/dpdata
   license: LGPL-3.0
   license_family: LGPL
+  license_file: LICENSE
   summary: 'Manipulating DeePMD-kit, VASP and LAMMPS data formats'
   doc_url: https://github.com/deepmodeling/dpdata
   dev_url: https://github.com/deepmodeling/dpdata
