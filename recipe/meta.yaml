@@ -24,7 +24,7 @@ requirements:
     - python >=3.5
     - {{ pin_compatible('numpy') }}
     - monty
-    - pymatgen
+    - mendeleev
 
 test:
   imports:
