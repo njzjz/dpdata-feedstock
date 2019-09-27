@@ -1,5 +1,5 @@
 {% set name = "dpdata" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 28c428d9a302edc6fa1738ba89df3dadcf1b39220d950e893254e797d2047615
+  sha256: d04123ed158be9cb75fb0feedcbe9c93a63638605982c75eff0b0f254388ef19
 
 build:
   number: 0
