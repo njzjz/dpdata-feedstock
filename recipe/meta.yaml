@@ -1,28 +1,27 @@
 {% set name = "dpdata" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 28c428d9a302edc6fa1738ba89df3dadcf1b39220d950e893254e797d2047615
+  url: https://github.com/deepmodeling/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: 87367b5921d7022e2363a7c9c9c4d30cc5f842fe23874684419494d8c94aa2fd
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
     - python >=3.5
     - pip
-    - numpy >=1.14.3
     - setuptools_scm
   run:
     - python >=3.5
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.14.3
     - monty
 
 test:
