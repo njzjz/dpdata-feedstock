@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/deepmodeling/{{ name }}/archive/{{ version }}.tar.gz
   sha256: d04123ed158be9cb75fb0feedcbe9c93a63638605982c75eff0b0f254388ef19
 
 build:
@@ -18,11 +18,10 @@ requirements:
   host:
     - python >=3.5
     - pip
-    - numpy >=1.14.3
     - setuptools_scm
   run:
     - python >=3.5
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.14.3
     - monty
 
 test:
