@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.5
     - numpy >=1.14.3
-    - monty
+    - monty <2.0.7
 
 test:
   imports:
