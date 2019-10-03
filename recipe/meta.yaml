@@ -1,5 +1,5 @@
 {% set name = "dpdata" %}
-{% set version = "0.1.9" %}
+{% set version = "0.1.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/deepmodeling/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 14c6de175bb4579cd8e6fca04d845cb14416ca4b5d3053c1b86d79b4e97cd04f
+  sha256: 4cc2e650201bd71b854da21c561d60c0027e1c8c70a6d57b1c364db4a28a2fcf
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.5
     - numpy >=1.14.3
-    - monty <2.0.7
+    - monty
 
 test:
   imports:
