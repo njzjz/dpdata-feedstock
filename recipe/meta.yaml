@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://github.com/deepmodeling/dpdata
-  license: LGPL-3.0
+  license: LGPL-3.0-only
   license_family: LGPL
   license_file: LICENSE
   summary: Manipulating DeePMD-kit, VASP and LAMMPS data formats
