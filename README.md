@@ -3,7 +3,7 @@ About dpdata
 
 Home: https://github.com/deepmodeling/dpdata
 
-Package license: LGPL-3.0
+Package license: LGPL-3.0-only
 
 Feedstock license: BSD-3-Clause
 
