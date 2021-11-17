@@ -24,6 +24,8 @@ requirements:
     - numpy >=1.14.3
     - monty
     - scipy
+    - h5py
+    - wcmatch
 
 test:
   imports:
