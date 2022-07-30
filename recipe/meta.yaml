@@ -10,7 +10,7 @@ source:
   sha256: 0ed8dc49927c8b13bff8567d78e44d07c7bcf9fc9c1a022b64108297a52b443b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -30,6 +30,8 @@ requirements:
 test:
   imports:
     - dpdata
+  commands:
+    - dpdata -h
 
 about:
   home: https://github.com/deepmodeling/dpdata
